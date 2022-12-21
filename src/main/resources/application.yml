@@ -1,0 +1,26 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: member-service
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://158.247.213.0:3306/atchardb?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: atchar1225user
+    password: atchar1225userpw
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+eureka :
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:admin2580@${eureka.instance.hostname}:9000/eureka/
