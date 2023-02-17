@@ -6,9 +6,9 @@ spring:
     name: member-service
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://158.247.213.0:3306/atchardb?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
-    username: atchar1225user
-    password: atchar1225userpw
+    url: jdbc:mysql://141.164.61.114:3306/temeethb?serverTimezone=UTC&characterEncoding=UTF-8
+    username: lntemeetuser
+    password: Temeet2580!@#$
 
 mybatis:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -18,7 +18,7 @@ mybatis:
 
 eureka :
   instance:
-    hostname: localhost
+    hostname: 141.164.61.114
   client:
     register-with-eureka: true
     fetch-registry: true
